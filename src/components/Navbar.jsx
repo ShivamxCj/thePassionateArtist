@@ -42,17 +42,24 @@ const Navbar = () => {
           </div>
           {/* ------------------------------------mobile view drawer-------------------------------------------- */}
           {mobileDrawerOpen && (
-            <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
+            <div className="fixed top-0 right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
+              <button
+                onClick={() => setMobileDrawerOpen(false)}
+                className="absolute top-4 right-4 text-white text-2xl"
+                aria-label="Close menu"
+              >
+                &times;
+              </button>
               <ul>
                 {navItems.map((item, index) => (
-                  <li key={index} className="py-4">
-                    <a href={item.href}>{item.label}</a>
+                  <li key={index} className="py-4 hover:text-teal-600 ease-in-out duration-200">
+                    <a href={item.href} onClick={() => setMobileDrawerOpen(false)}>{item.label}</a>
                   </li>
                 ))}
               </ul>
               <div className="flex space-x-6">
                 <a
-                  href="#"
+                  href="mailto:nainatiwari080105@gmail.com"
                   className="py-2 px-3 border rounded-md bg-gradient-to-r from-teal-500 to-teal-800"
                 >
                   Contact me

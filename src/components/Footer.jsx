@@ -2,6 +2,7 @@ import { resourcesLinks, platformLinks, communityLinks } from "../constants";
 
 const Footer = () => {
   return (
+    <section id="footer">
     <footer className="mt-20 border-t py-10 border-neutral-700">
   <div className="text-center text-white">
     <h2 className="text-lg font-medium">Crafted with love</h2>
@@ -32,6 +33,7 @@ const Footer = () => {
     </div>
   </div>
 </footer>
+</section>
 
 
   );
